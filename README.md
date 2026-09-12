@@ -32,7 +32,7 @@ The frontend implementation is in place and is undergoing final integrated accep
 
 The homepage now loads categories, launch districts, and recommended shops from the API in normal mode, with explicit mock mode for development. The `/shops` directory uses URL-backed filters and API pagination, with browser-local favorites. Applied filters appear as removable Persian chips; individual removal and clear-all update the URL, reset pagination, and work with direct links and browser history. Shop details reuse the same favorite store, load contact/map data, paginate Google and Ikommak reviews independently, and provide mobile sticky call/map/reservation controls without inventing missing facts. A guest can submit a review which remains pending until moderation. The reservation pages create retry-safe, no-payment requests and display a privacy-safe tracking receipt without claiming the booking is confirmed. Protected admin pages support cookie-session login, review moderation, and valid reservation status transitions. The accessibility pass adds skip links, keyboard-safe navigation, stable review labels, and explicit missing-data fallbacks. Stable API failures map to safe Persian messages.
 
-On 2026-09-11, the active UI completed integrated API/MySQL browser acceptance. Public and admin flows, URL-backed search, pending review/reservation creation, moderation/transition, public visibility, logout, and protected-route redirect passed. Exact 1440×900 and 390×844 checks found no horizontal overflow across five core routes; mobile actions, keyboard menu/skip-link behavior, and the console were clean. The flow exposed and corrected fractional native-review aggregate validation; 73 frontend tests and the production build pass. Remaining release work is production deployment and recoverable version control.
+On 2026-09-12, the active UI completed integrated API/MySQL browser acceptance. Public and admin flows, URL-backed search, pending review/reservation creation, moderation/transition, public visibility, logout, and protected-route redirect passed. Exact 1440×900 and 390×844 checks found no horizontal overflow across five core routes; mobile actions, keyboard menu/skip-link behavior, and the console were clean. The flow exposed and corrected fractional native-review aggregate validation; 73 frontend tests and the production build pass. Both active GitHub remotes are reachable and synchronized at their pushed baselines. Remaining release work is committing the newest verification checkpoint and provisioning production.
 
 ## Run locally
 
@@ -66,6 +66,8 @@ npm run build  # create a production build
 npm run verify # run tests and the production build
 npm run preview
 ```
+
+From the backend directory, `npm run verify:system` runs the complete backend, importer dry-run, deployment, frontend-test, and frontend-build gate. Set `IKOMMAK_FRONTEND_DIR` when using a checkout layout different from the documented workspace.
 
 ## Application routes
 
