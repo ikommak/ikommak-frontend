@@ -6,6 +6,7 @@ This project intentionally preserves the newer blue/orange visual design. The ol
 
 The broader system architecture and delivery tracker live in the backend documentation:
 
+- [Quick start (run the whole system locally)](../back/docs/QUICKSTART.md)
 - [Architecture](../back/docs/ARCHITECTURE.md)
 - [Importer and zero-cost data workflow](../back/docs/IMPORTER.md)
 - [20-task delivery tracker](../back/docs/DELIVERY_STATUS.md)
